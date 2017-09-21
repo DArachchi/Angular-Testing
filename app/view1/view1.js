@@ -2,20 +2,20 @@
 
 angular.module('myApp.view1', ['ngRoute'])
 
-.config(['$routeProvider', '$httpProvider', function($routeProvider) {
+.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view1', {
     templateUrl: 'view1/view1.html',
-    controller: ['http', function View1Controller($http) {
-      var self = this;
-  
-      $http.get('teams/teams.json'.then(function(response) {
-        self.teams = response.data;
-        console.log(self.teams);
-      }));
-    }]
+    controller: 'View1Ctrl'
   });
 }])
 
-.controller('View1Ctrl', [function() {
-
+.controller('View1Ctrl', ['$scope', '$http', function($scope, $http) {
+    $http.get('teams/teams.json').then(function successCallback(response) {
+      $scope.teams = response.data;
+      console.log(self.teams);
+    },
+    function errorCallback(response) {
+      alert("Error on data loading:" + " " + response.status + ": " + response.statusText);
+      console.log(response);
+    });
 }]);
