@@ -1,1 +1,15 @@
-<p>This is the partial for view 1.</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-10">
+            <ul>
+                Formula 1 Teams
+                <li ng-repeat="team in $.ctrl.teams">
+                    <p>Team name {{team.name}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

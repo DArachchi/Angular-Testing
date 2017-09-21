@@ -1,0 +1,27 @@
+[
+    {
+        "id": "ferrari", 
+        "imageUrl": "#", 
+        "name": "Scuderia Ferrari"
+    },
+    {
+        "id": "mclaren", 
+        "imageUrl": "#", 
+        "name": "McLaren"
+    },
+    {
+        "id": "mercedes", 
+        "imageUrl": "#", 
+        "name": "Mercedes-Benz AMG"
+    },
+    {
+        "id": "redbull", 
+        "imageUrl": "#", 
+        "name": "Red Bull Racing"
+    },
+    {
+        "id": "williams", 
+        "imageUrl": "#", 
+        "name": "Williams"
+    }
+]
