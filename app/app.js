@@ -4,7 +4,8 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.view1',
-  'myApp.view2'
+  'myApp.view2',
+  'teamService'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
@@ -18,6 +19,6 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
     templateUrl: 'view2/view2.html',
     controller: 'View2Ctrl'
   });
-  
+
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
